@@ -1,7 +1,6 @@
 package generator
 
-import data.Color._
-import data.{Color, Link, Page}
+import data.{Link, Page}
 import global.Config
 
 import java.io.PrintWriter
@@ -9,26 +8,13 @@ import java.io.PrintWriter
 object MermaidGenerator {
   def apply(page: Page): Unit = {
     val definitions = page.traverse(definition).sorted.distinct
-    val styles = page.traverse(style).sorted.distinct
     val clicks = page.traverse(click).sorted.distinct
     val relations = page.traverseWithSubs((self, subs) => subs.flatMap(sub => relation(self, sub.self))).sorted.distinct
 
-    render(definitions ++ styles ++ clicks ++ relations)
+    render(definitions ++ clicks ++ relations)
   }
 
   private def definition(link: Link): String = s"""${link.id}("${link.id}<br><br>${link.view}")"""
-
-  private def style(link: Link): String = s"style ${link.id} fill:#${rgb(link.color)}, stroke: #000000"
-
-  private def rgb(color: Color): String = color match {
-    case Red => "ffcccc"
-    case Blue => "ccccff"
-    case Green => "ccffcc"
-    case Purple => "ffccff"
-    case Yellow => "ffffcc"
-    case Cyan => "219ddd"
-    case Gray => "cccccc"
-  }
 
   private def click(link: Link): String = s"""click ${link.id} "https://${Config.domain}${link.origin}""""
 

@@ -1,12 +1,13 @@
+import client.Client
 import data.Link
-import global.Log
-import parser.html.HtmlParser
 import generator.MermaidGenerator
+import global.Log
 
 object Main extends App {
-  val page = HtmlParser(Link.top)
-
-  MermaidGenerator(page)
-
-  Log.logger.close()
+  try {
+    val page = Client.getPage(Link.top)
+    MermaidGenerator(page)
+  } finally {
+    Log.logger.close()
+  }
 }

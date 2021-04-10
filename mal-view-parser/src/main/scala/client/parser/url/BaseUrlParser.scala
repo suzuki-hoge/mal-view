@@ -1,4 +1,4 @@
-package parser.url
+package client.parser.url
 
 import data.Link
 

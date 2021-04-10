@@ -1,9 +1,7 @@
 package data
 
-import data.Color.Green
-
-case class Link(id: String, view: String, origin: String, color: Color, recursive: Boolean = true)
+case class Link(id: String, view: String, origin: String, forbidden: Boolean = false)
 
 object Link {
-  val top: Link = Link("Top", "/", "/", Green)
+  val top: Link = Link("Top", "/", "/")
 }
