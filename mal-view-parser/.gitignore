@@ -1,0 +1,9 @@
+target/
+project/
+.bsp/
+
+.idea
+*.iml
+
+generated/
+

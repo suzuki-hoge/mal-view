@@ -1,0 +1,56 @@
+@startuml
+
+class Main
+
+package data {
+    class Page
+    class Link
+
+    Page --> Link
+    Page --> "*" Page
+}
+
+package global {
+    class Config
+    class Log
+    Log -u-> Config
+}
+
+package parser {
+    package html {
+        class HtmlParser {
+        }
+    }
+
+    package url {
+        interface BaseUrlParser {
+        }
+        interface AnimeUrlParser {
+        }
+        interface CharacterUrlParser {
+        }
+        interface UrlParser {
+        }
+        UrlParser -r-|> AnimeUrlParser
+        UrlParser -r-|> CharacterUrlParser
+        AnimeUrlParser -r-|> BaseUrlParser
+        CharacterUrlParser --|> BaseUrlParser
+    }
+
+    HtmlParser -d-> UrlParser
+}
+
+package generator {
+    class MermaidGenerator
+}
+
+Main -d-> HtmlParser
+Main -r-> MermaidGenerator
+
+HtmlParser -r-> Page
+MermaidGenerator --> Page
+
+HtmlParser -d-> Config
+MermaidGenerator -d-> Config
+
+@enduml
