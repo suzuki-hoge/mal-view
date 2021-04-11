@@ -9,7 +9,7 @@ trait PeopleUrlParser extends BaseUrlParser {
     case f1 ~ _ => Link("People-List", s"$f1", s"$f1")
   }
 
-  private def detail = "/people" ~ n("people_id") ~ s("people_name") ^^ {
-    case f1 ~ n1 ~ s1 => Link("People-Detail", s"$f1${n1.view}${s1.view}", s"$f1${n1.origin}${s1.origin}")
+  private def detail = "/people" ~ /("people_id") ~ /("people_name") ^^ {
+    case f1 ~ v1 ~ v2 => Link("People-Detail", s"$f1${v1.view}${v2.view}", s"$f1${v1.origin}${v2.origin}")
   }
 }

@@ -24,15 +24,15 @@ trait AboutUrlParser extends BaseUrlParser {
   }
 
   private def cookie_policy = "/about" ~ "/cookie_policy" ^^ {
-    case f1 ~ f2 => Link("About-Cookie-policy", s"$f1$f2", s"$f1$f2", forbidden = true)
+    case f1 ~ f2 => Link("About-Cookie_policy", s"$f1$f2", s"$f1$f2", forbidden = true)
   }
 
   private def notice_at_collection = "/about" ~ "/notice_at_collection" ^^ {
-    case f1 ~ f2 => Link("About-Notice-At-Collection", s"$f1$f2", s"$f1$f2", forbidden = true)
+    case f1 ~ f2 => Link("About-Notice_At_Collection", s"$f1$f2", s"$f1$f2", forbidden = true)
   }
 
   private def privacy_policy = "/about" ~ "/privacy_policy" ^^ {
-    case f1 ~ f2 => Link("About-Privacy-Policy", s"$f1$f2", s"$f1$f2", forbidden = true)
+    case f1 ~ f2 => Link("About-Privacy_Policy", s"$f1$f2", s"$f1$f2", forbidden = true)
   }
 
   private def sitemap = "/about" ~ "/sitemap" ^^ {
@@ -40,6 +40,6 @@ trait AboutUrlParser extends BaseUrlParser {
   }
 
   private def terms_of_use = "/about" ~ "/terms_of_use" ^^ {
-    case f1 ~ f2 => Link("About-Terms-Of-Use", s"$f1$f2", s"$f1$f2", forbidden = true)
+    case f1 ~ f2 => Link("About-Terms_Of_Use", s"$f1$f2", s"$f1$f2", forbidden = true)
   }
 }

@@ -7,11 +7,13 @@ import scala.io.Source
 
 object Fetcher {
   def forbidden(link: Link): Seq[String] = {
+    println(" stopped ( forbidden )")
     Log.logger.info(link.id, "fetching is stopped ( forbidden )")
     Seq()
   }
 
   def tooDeep(link: Link): Seq[String] = {
+    println(" stopped ( too deep )")
     Log.logger.info(link.id, "fetching is stopped ( too deep )")
     Seq()
   }
