@@ -17,7 +17,7 @@ package global {
 }
 
 package generator {
-    class MermaidGenerator
+    class HierarchicalEdgePrinter
 }
 
 package client {
@@ -56,10 +56,10 @@ package client {
 }
 
 Main -d-> Client
-Main -d-> MermaidGenerator
+Main -d-> HierarchicalEdgePrinter
 
 Client --> Page
-MermaidGenerator -r-> Page
+HierarchicalEdgePrinter -r-> Page
 
 Link -[hidden]d-> Log
 
