@@ -13,6 +13,7 @@ object Client {
   private val memo: mutable.Map[String, Seq[Link]] = mutable.Map.empty
 
   private def getSubLinks(link: Link, depth: Int): Seq[Link] = {
+    println(s"fetching... [ ${link.path} ]")
     if (link.forbidden) Fetcher.forbidden(link).map(_.asInstanceOf[Link])
     else if (Config.depth < depth) Fetcher.tooDeep(link).map(_.asInstanceOf[Link])
     else if (memo.contains(link.id)) memoized(link)

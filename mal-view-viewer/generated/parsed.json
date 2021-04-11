@@ -1,0 +1,21 @@
+[
+{ "id": "Anime-Characters", "path": "root:anime:/anime/{anime_id}/{anime_name}/characters", "origin": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/characters", "subs": [] },
+{ "id": "Anime-Clubs", "path": "root:anime:/anime/{anime_id}/{anime_name}/clubs", "origin": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/clubs", "subs": [] },
+{ "id": "Anime-Details", "path": "root:anime:/anime/{anime_id}/{anime_name}", "origin": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood", "subs": ["root::/", "root:anime:/anime.php", "root:anime:/anime/{anime_id}/{anime_name}", "root:anime:/anime/{anime_id}/{anime_name}/characters", "root:anime:/anime/{anime_id}/{anime_name}/clubs", "root:anime:/anime/{anime_id}/{anime_name}/episode", "root:anime:/anime/{anime_id}/{anime_name}/featured", "root:anime:/anime/{anime_id}/{anime_name}/forum", "root:anime:/anime/{anime_id}/{anime_name}/news", "root:anime:/anime/{anime_id}/{anime_name}/pics", "root:anime:/anime/{anime_id}/{anime_name}/reviews", "root:anime:/anime/{anime_id}/{anime_name}/stats", "root:anime:/anime/{anime_id}/{anime_name}/userrecs", "root:anime:/anime/{anime_id}/{anime_name}/video", "root:character:/character.php", "root:character:/character/{character_id}/{character_name}", "root:forbidden:db:/dbchanges.php", "root:people:/people/{people_id}/{people_name}"] },
+{ "id": "Anime-Episodes", "path": "root:anime:/anime/{anime_id}/{anime_name}/episode", "origin": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/episode", "subs": [] },
+{ "id": "Anime-Featured", "path": "root:anime:/anime/{anime_id}/{anime_name}/featured", "origin": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/featured", "subs": [] },
+{ "id": "Anime-Forum", "path": "root:anime:/anime/{anime_id}/{anime_name}/forum", "origin": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/forum", "subs": [] },
+{ "id": "Anime-News", "path": "root:anime:/anime/{anime_id}/{anime_name}/news", "origin": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/news", "subs": [] },
+{ "id": "Anime-Pictures", "path": "root:anime:/anime/{anime_id}/{anime_name}/pics", "origin": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/pics", "subs": [] },
+{ "id": "Anime-Recommendations", "path": "root:anime:/anime/{anime_id}/{anime_name}/userrecs", "origin": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/userrecs", "subs": [] },
+{ "id": "Anime-Reviews", "path": "root:anime:/anime/{anime_id}/{anime_name}/reviews", "origin": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/reviews", "subs": [] },
+{ "id": "Anime-Search", "path": "root:anime:/anime.php", "origin": "https://myanimelist.net/anime.php", "subs": [] },
+{ "id": "Anime-Stats", "path": "root:anime:/anime/{anime_id}/{anime_name}/stats", "origin": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/stats", "subs": [] },
+{ "id": "Anime-Videos", "path": "root:anime:/anime/{anime_id}/{anime_name}/video", "origin": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/video", "subs": [] },
+{ "id": "Character-Detail", "path": "root:character:/character/{character_id}/{character_name}", "origin": "https://myanimelist.net/character/417/Lelouch_Lamperouge", "subs": [] },
+{ "id": "Character-List", "path": "root:character:/character.php", "origin": "https://myanimelist.net/character.php", "subs": [] },
+{ "id": "Forbidden-DB-Change", "path": "root:forbidden:db:/dbchanges.php", "origin": "https://myanimelist.net/dbchanges.php", "subs": [] },
+{ "id": "Info-Genre", "path": "root:info:/info.php?go=genre", "origin": "https://myanimelist.net/info.php?go=genre", "subs": [] },
+{ "id": "People-Detail", "path": "root:people:/people/{people_id}/{people_name}", "origin": "https://myanimelist.net/people/82/Romi_Park", "subs": [] },
+{ "id": "Top", "path": "root::/", "origin": "https://myanimelist.net/", "subs": ["root::/", "root:anime:/anime.php", "root:anime:/anime/{anime_id}/{anime_name}", "root:anime:/anime/{anime_id}/{anime_name}/video", "root:character:/character.php", "root:character:/character/{character_id}/{character_name}", "root:info:/info.php?go=genre"] }
+]

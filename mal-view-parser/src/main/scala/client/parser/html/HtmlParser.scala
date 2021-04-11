@@ -22,7 +22,7 @@ object HtmlParser {
         UrlParser(url)
       }
 
-    val links = parsed.filter(_.isRight).map(_.right.get).distinctBy(_.id).sortBy(_.view)
+    val links = parsed.filter(_.isRight).map(_.right.get).distinctBy(_.id).sortBy(_.path)
 
     links.map(s => s"https://${Config.domain}${s.origin}").foreach(Log.logger.success(id, _))
     parsed.filter(_.isLeft).map(_.left.get).distinct.sorted.map(s => s"https://${Config.domain}$s").foreach(Log.logger.failure(id, _))

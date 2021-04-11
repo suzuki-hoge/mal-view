@@ -12,7 +12,7 @@ trait AnimeUrlParser extends BaseUrlParser {
   }
 
   private def videos = "/anime" ~ n("anime_id") ~ s("anime_name") ~ "/video" ^^ {
-    case f1 ~ n1 ~ s1 ~ f2 => Link("Anime-Videos", s"$f1${n1.view}${s1.view}", s"$f1${n1.origin}${s1.origin}$f2")
+    case f1 ~ n1 ~ s1 ~ f2 => Link("Anime-Videos", s"$f1${n1.view}${s1.view}$f2", s"$f1${n1.origin}${s1.origin}$f2")
   }
 
   private def episodes = "/anime" ~ n("anime_id") ~ s("anime_name") ~ "/episode" ^^ {
@@ -20,7 +20,7 @@ trait AnimeUrlParser extends BaseUrlParser {
   }
 
   private def episode = "/anime" ~ n("anime_id") ~ s("anime_name") ~ "/episode" ~ n("episode_number") ^^ {
-    case f1 ~ n1 ~ s1 ~ f2 ~ n2 => Link("Anime-Episode", s"$f1${n1.view}${s1.view}${n2.view}", s"$f1${n1.origin}${s1.origin}$f2${n2.origin}")
+    case f1 ~ n1 ~ s1 ~ f2 ~ n2 => Link("Anime-Episode", s"$f1${n1.view}${s1.view}$f2${n2.view}", s"$f1${n1.origin}${s1.origin}$f2${n2.origin}")
   }
 
   private def reviews = "/anime" ~ n("anime_id") ~ s("anime_name") ~ "/reviews" ^^ {
